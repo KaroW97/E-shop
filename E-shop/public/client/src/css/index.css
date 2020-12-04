@@ -1,0 +1,286 @@
+@font-face {
+    font-family:'Raleway-Regular';
+    src: url('../fonts/Raleway-Regular.ttf') format('truetype'); 
+}
+#root,body{
+    font-family: 'Raleway-Regular', Fallback, sans-serif;
+    width:100% 
+}
+a{
+    text-decoration: none
+}
+.main-container{
+    width: 100%;
+    max-width:1920px;
+    margin: 0 auto;
+    display:flex;
+    justify-content:center;
+}
+.side-nav-bar{
+    width:230px;
+    margin-top:4rem;
+    max-height:300px;
+    top:0px;
+    position: -webkit-sticky !important;
+    position: sticky !important;  
+   
+}
+article{
+    outline:none;
+    -webkit-appearance: none;
+}
+ .active {
+    color:grey ;
+    
+}
+.MuiTabs-flexContainer{
+    height: 70px;
+    
+}
+.avatar-icon{
+    right:0;
+}
+.MuiToolbar-root {
+    display: flex;
+    justify-content:space-between ;
+}
+.MuiToolbar-root .MuiButtonBase-root{
+    font-size:1.1rem;
+}  /*MuiTab-root MuiTab-textColorInherit Mui-selected*/
+.MuiButtonBase-root.avatar-icon:hover,
+.MuiButtonBase-root.avatar-icon:visited,
+.MuiButtonBase-root.avatar-icon:focus {
+    background-color: inherit;
+}
+.MuiCollapse-wrapper{
+    margin-left:0.8rem;
+   
+}
+.MuiCollapse-wrapper .MuiTypography-root{
+    font-size: 14px;
+}
+.MuiDrawer-paperAnchorDockedLeft{
+    border-right: none !important;
+}
+.MuiDrawer-paper{ 
+    position: -webkit-sticky !important;
+    position: sticky !important;
+}
+.top-section{
+    position: relative;
+}
+.main-container .store{
+    width: 100%;
+    max-width:1400px;
+    margin: 2rem auto;
+    padding:40px;
+}
+/*Top Section Picture on Promotions Page*/
+.main-container .top-section .section-header-absolute, 
+.main-container .top-section address{
+    position: absolute;
+}
+.main-container .top-section .section-header-absolute{
+    left:20px;
+    top:0;
+}
+.main-container .address-info{
+    right:20px ;
+    bottom:20px;
+}
+.main-container .promotion-img{ 
+    max-width: 100%;
+    max-height: 50rem;
+} 
+.shop{  
+    display:flex;
+    justify-content: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    margin-top:20px;
+}
+.item-in-store{
+    cursor: pointer;
+    padding-bottom:10px;
+
+}
+.item-in-store:not(:first-child){
+    margin: 0 5px;
+}
+.MuiCardContent-root{
+ 
+}
+.item-in-store .card-content #cf,
+.item-in-store .card-content {
+   
+    width:275px;
+    margin:0;
+    padding:0;
+}
+
+.item-in-store .card-content #cf{
+    position: relative;
+}
+.card-content #cf .creator-information{
+    opacity:1;
+    right:.6rem;
+    bottom:1.3rem;
+}
+
+.card-content{
+    min-height: 200px;
+}
+
+ .card-content .brand-name{
+    font-weight: bold;
+}
+.card-content .brand-name,
+.card-content .brand-price{
+    margin-left:10px;
+}
+
+.card-content #cf {
+    position:relative;
+    height:200px;    
+}
+/*Image opacity transition*/
+#cf img {
+  
+    width:inherit;
+    position:absolute;
+    -webkit-transition: opacity 0.7s ease-in-out;
+    -moz-transition: opacity 0.7s ease-in-out;
+    -o-transition: opacity 0.7s ease-in-out;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.card-content:hover .top {
+    opacity:0;
+}
+.card-content:hover .icon-border{
+   opacity:1;
+}
+.card-content .icon-border{
+    opacity:0;
+    transition:opacity 0.7s ease-in-out 
+}
+.element-related-to-bottom-img .red-icon
+{
+    color:rgb(192, 4, 4);
+    animation: pulse 0.7s linear 1 alternate; 
+}
+
+.element-related-to-bottom-img .fav-icon {
+    z-index:2;
+   right:.6rem;
+   top:0.6rem;
+}
+.card-content #cf .fav-icon,
+.card-content #cf .creator-information,
+.size-color-section .top-dot ,
+.size-color-section .size-typography
+{
+    position: absolute;
+}
+@keyframes pulse_back{
+    from{
+        opacity:1
+    } 
+    to{
+        opacity:0
+    }
+}
+
+@keyframes pulse{
+    from{
+        opacity:0
+    } 
+    to{
+        opacity:1
+    }
+}
+@keyframes pulse2{
+    from{
+        opacity:0
+    } 
+    to{
+        opacity:1
+    }
+}
+.size-color-section,
+.size-typography,
+.top-dot{
+    position: relative;
+    width:100%;
+    display: flex;
+    justify-content:flex-start;
+}
+
+.size-color-section{
+    height:40px;
+
+}
+.size-color-section .top-dot .dot{
+    width:13px;
+    height: 13px;
+    border-radius:50px;
+}
+.top-dot,
+.size-color-section .size-typography{
+    margin:10px 10px ;
+}
+.size-color-section .size-typography{
+    position: relative;
+    top:6px;
+    opacity:0;
+}
+.size-color-section .top-dot .dot{
+    margin: 0 4px;
+}
+.size-color-section .size{
+    margin: 0 4px;
+  
+}
+
+
+.card-content:hover .top-dot{
+    background-color:transparent;
+}
+.card-content .size-color-section .size-typography{
+   
+    /*animation: to-top 0.4s linear 1 alternate forwards
+    .card-content:hover .size-typography{
+    opacity:1; 
+}*/
+
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+}
+.card-content:hover .size-color-section .size-typography{
+    opacity:1;
+    top:0;
+   
+}
+.card-content .size-color-section .top-dot{
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+}
+.card-content:hover .size-color-section .top-dot{
+    opacity:0;
+}
+@keyframes to-top {
+    0%{
+        opacity:0;
+        top:10px;
+    }
+    100%{
+        opacity:1;
+        z-index:1;
+        top:0
+    }
+  
+  }

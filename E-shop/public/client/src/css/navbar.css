@@ -1,0 +1,101 @@
+.article-right-side-navbar-header{
+    padding: 0 1.1rem 1rem 1.1rem;
+}
+.article-right-side-navbar .fav-section-header,
+.article-right-side-navbar  .bag-section-header{
+    padding: 1rem 1.1rem 1rem 1.1rem;
+}
+.article-right-side-navbar .fav-section-header h4,
+.article-right-side-navbar  .bag-section-header h4{
+    margin:0;
+}
+
+.article-right-side-navbar-button{
+    height: 45px;
+    width:100%;
+}
+.fav-section .button-section,
+.bag-section .button-section{
+    width:12rem;
+    padding: 0.6rem  0.6rem;
+
+}
+.fav-section .article-right-side-navbar-header {
+    text-align: center;
+   
+}
+.fav-section .button-section .MuiButton-root,
+.button-section.button-section .MuiButton-root{
+    border-radius: 0px;
+}
+
+.MuiMenu-paper{
+    top:4rem !important;
+}
+.article-right-side-navbar .article-right-side-navbar-button{
+
+    font-size:14px;
+}
+.article-right-side-navbar-header .article-right-side-navbar-button{
+    position: relative;
+    top:0;
+    color:white;
+    transition: top 0.25s ease
+}
+.article-right-side-navbar-header .article-right-side-navbar-button:hover{
+    top:-3px;
+   
+}
+.heart-pop-up-button:hover,  .article-right-side-navbar-button:hover{
+    background-color: #b930b5 !important;
+}
+
+.icon-section{
+    display:flex;
+    justify-content:space-evenly;
+}
+
+.icon-section .heart-icon,
+.icon-section .trolley-icon
+{
+    padding: 0rem 0.8rem;
+    display: flex;
+    word-break:break-word;
+    justify-content: space-around;
+    align-items: center;
+}
+.icon-section .heart-icon  .material-icons,
+.icon-section .trolley-icon  .material-icons {
+    padding: 0 20px 0 0;
+}
+.icon-section  h5 {
+    width:100px;
+}
+.icon-separation{
+    margin:10px;
+}
+
+.article-right-side-navbar hr{
+    margin:0;
+    opacity:0.3;
+}
+
+.right-side-nav{
+    display: flex;
+}
+
+.nav-bar-pop-up-element{
+    cursor: context-menu;
+    width:50px;
+    position: relative;
+}
+.grow-box .MuiCardContent-root{
+    padding:0px 0px !important;
+    margin:0;
+}
+.nav-bar-pop-up-element .grow-box{
+    position: absolute;
+    right:12px;
+    top:50px;
+    z-index:20; 
+}
