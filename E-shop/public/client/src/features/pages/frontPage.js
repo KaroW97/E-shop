@@ -16,6 +16,7 @@ export const FrontPage = () =>{
                         pl.freepik.com
                     </address>
                     <img className="promotion-img" alt={`promiotions`} src= {promotion}/>
+                
                 </section>
               
                 

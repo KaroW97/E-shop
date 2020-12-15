@@ -1,3 +1,43 @@
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src : url('../fonts/Montserrat-Bold.ttf') format('truetype')
+}
+.top-app-bar{
+  display:flex;
+  justify-content:space-between;
+}
+a{
+    text-decoration: none;
+    color:rgba(0, 0, 0, 0.472);
+}
+.top-app-bar .right-section-top-app-bar {
+   margin-left:1rem;
+   display:flex;
+    width:100px;
+   justify-content:space-between;
+}
+.right-section-top-app-bar a:not(:first-child){
+    padding: 0 10px;
+}
+.right-section-top-app-bar a{
+    font-family: 'Montserrat-Bold', Fallback, sans-serif;
+   
+}
+.right-section-top-app-bar a:hover{
+    color:rgb(42, 42, 42);
+}
+.logo{
+    cursor: pointer;
+    margin-top:0.9rem;
+}
+.MuiTabs-flexContainer{
+    height: 70px;
+} 
+
+.MuiTab-root {
+    min-width:95px !important;
+}
+
 .article-right-side-navbar-header{
     padding: 0 1.1rem 1rem 1.1rem;
 }
@@ -9,20 +49,44 @@
 .article-right-side-navbar  .bag-section-header h4{
     margin:0;
 }
+.button-section .heart-pop-up-button:hover,
+.button-section  .article-right-side-navbar-button:hover,
+.article-right-side-navbar-header .article-right-side-navbar-button:hover{
+    background-color: #b930b5 ;
+}
+
+.button-section .color-change,
+.button-section .color-change:hover{
+    background-color:transparent;
+    border: 1px solid rgb(230, 230, 230);
+    color:black;
+}
 
 .article-right-side-navbar-button{
     height: 45px;
     width:100%;
 }
 .fav-section .button-section,
-.bag-section .button-section{
-    width:12rem;
+.bag-section .button-section {
+    width:auto;
+    min-width:200px;
+    text-align: center;
     padding: 0.6rem  0.6rem;
 
 }
-.fav-section .article-right-side-navbar-header {
-    text-align: center;
-   
+.button-section .to-buy-bag-button{
+    margin: 0.15rem 0;
+}
+
+.bag-section .button-section button{
+    width:15rem;
+}
+.button-section{
+    height:auto;
+}
+.fav-section .article-right-side-navbar-header,
+.bag-section .article-right-side-navbar-header {
+    text-align: center;  
 }
 .fav-section .button-section .MuiButton-root,
 .button-section.button-section .MuiButton-root{
@@ -33,7 +97,6 @@
     top:4rem !important;
 }
 .article-right-side-navbar .article-right-side-navbar-button{
-
     font-size:14px;
 }
 .article-right-side-navbar-header .article-right-side-navbar-button{
@@ -44,10 +107,6 @@
 }
 .article-right-side-navbar-header .article-right-side-navbar-button:hover{
     top:-3px;
-   
-}
-.heart-pop-up-button:hover,  .article-right-side-navbar-button:hover{
-    background-color: #b930b5 !important;
 }
 
 .icon-section{
@@ -76,7 +135,7 @@
 }
 
 .article-right-side-navbar hr{
-    margin:0;
+    margin:0 1rem;
     opacity:0.3;
 }
 
@@ -98,4 +157,41 @@
     right:12px;
     top:50px;
     z-index:20; 
+}
+.to-buy-section .to-buy-article:not(:last-child){
+    border-bottom:1px solid rgba(0, 0, 0, 0.13);
+}
+.extend-size{
+    overflow:auto;
+    min-height: 90px;
+    max-height: 250px;
+}
+.to-buy-section .to-buy-article{
+    box-shadow:none;
+    cursor:pointer;
+    height:80px;
+    display:flex;
+    margin:0 1rem;
+    align-items:center; 
+}
+.to-buy-img img{
+    padding: 0.5rem 0;
+    width:6rem;
+}
+.to-buy-information{
+    width:7rem;
+    margin:0 0 0 1.2rem;
+}
+.to-buy-information h4{
+    margin:0;
+    font-size:14px;
+}
+.to-buy-information p{
+    margin:0;
+    margin:.2rem 0 ;
+    font-size:12px;
+}
+.to-buy-price{
+   
+    font-size:14px;
 }

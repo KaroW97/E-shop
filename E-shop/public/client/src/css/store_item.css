@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src : url('../fonts/Montserrat-Bold.ttf') format('truetype')
+}
+
+.item-section{
+    margin-top:2rem;
+    flex:wrap;
+    display:flex;
+    justify-content:space-between;
+}
+
+.img-article .grid-list{
+    width: 900px;
+   
+}
+.img-article .grid-list .grid-list-title{
+    display:flex;
+    justify-content:space-between;
+    overflow: hidden;
+    flex:wrap;
+}
+.product-information{
+    padding:1.2rem 0 1.2rem 7rem;
+}
+.price-article{
+    margin-top:2rem;
+}
+.price-article h3,
+.price-article p,
+.color-article h3{
+    margin:0;
+}
+.price-article p{
+    font-size:0.7rem;
+    margin-top:0.5rem;
+    color:grey;
+    font-family: 'Montserrat-Bold', Fallback, sans-serif;
+}
+.product-information .dot{
+    cursor: pointer;
+    margin:1rem 0.4rem 0 0;
+    width:1.4rem;
+    height: 1.4rem;
+    border-radius:50%;
+
+    transition: all 0.1s linear;
+}
+
+.product-information .dot:hover,
+.product-information .dotChecked
+{
+    width:1.8rem;
+    height: 1.8rem;
+}
+.color-article{
+    margin-top:1.5rem;
+    height:75px;
+}
+.color-article h3{
+    font-size:1.2rem;
+}
+.size-article,
+.color-article .colors,
+.size-article.sizes,
+.submit-article{
+    display: flex;
+
+}
+.color-article,
+.size-article {
+    flex-direction: column;
+}
+
+.size-article{
+    flex-wrap:wrap;
+    justify-content: start;
+    width:300px;
+   
+}
+.size-article .size-button{
+    cursor:pointer;
+    margin: 0 0.2rem 0.2rem 0;
+    padding:0.4rem 0;
+    width:70px;
+    outline:0;
+    border-radius: none;
+    border:1px solid rgb(109, 108, 108);
+    background-color: transparent;
+    transition: background-color 0.12s linear;
+}
+.size-article .size-button:hover,
+.size-article .clicked{
+    background-color:rgb(212, 212, 212);
+} 
+.submit-article{
+    margin-top:2rem;
+    height:5rem;
+    display:flex;
+    position: relative;
+  
+}  
+.submit-article .alert-error-pop-up{
+    text-align: center;
+    padding:0 0.5rem 0 0.9rem;
+    width:180px;
+    height:36px;
+    color:white;
+    font-size:13px;
+    font-family: 'Raleway-Regular', Fallback, sans-serif;
+    top:-.8rem;
+    left:0.55rem;
+    position:absolute;
+    animation: pop-up 1.2s linear 1 alternate
+                ,pop-up-opacity 1s linear 2s 1 forwards;
+  
+}
+.zero_articles{
+    text-decoration: line-through;
+
+}
+@keyframes pop-up{
+    0%{
+        top:1rem;
+    }
+    100%{
+        top:-.8rem;
+    }
+}
+@keyframes pop-up-opacity{
+    0%{
+        opacity:1
+    }
+    100%{
+        opacity:0;
+    }
+}
+.submit-article .submit-button {
+    margin-top:1.7rem;
+    height:2.5rem;
+    width:80%;
+}
+
+.fav-element{
+    
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s linear
+}
+.fav-element .fav-icon,
+.fav-element .poping-dot{
+    top:1.25rem;
+    right:0.1rem;
+    position: absolute;
+}
+
+.fav-element .icon-border{
+    margin:0;
+    opacity:1;
+    transition: all 0.2s linear;
+}
+.fav-element .red{
+    color:rgb(192, 4, 4);
+}
+.fav-element:hover .icon-border{
+    animation: fade 0.4s linear 1 alternate;
+}
+
+.fav-element .poping-dot{
+    top:0rem;
+    right:-2.6rem;
+    opacity:0;
+    width:2rem;
+    height: 2rem;
+    border-radius:50%;
+    background-color:rgb(228, 225, 225);
+    transition: opacity 0.3s linear;
+}
+.fav-element:hover .poping-dot{
+    opacity:1;
+ }
+ .fav-element .poping-dot-clicked
+{
+    animation: bounce 0.6s linear 1 alternate;
+}
+.fav-element .poping-dot-un-clicked{
+    animation: bounce-back 0.6s linear 1 alternate;
+}
+@keyframes fade {
+    form{
+        transform: scale(1.0);
+    }
+    to{
+       transform: scale(0.8);
+    }
+}
+@keyframes bounce {
+    0%{
+        opacity:0;
+        background-color:rgb(228, 225, 225);
+        transform: scale(0.4);
+        
+    }
+    50%{
+       opacity:1;
+       transform: scale(1.0);
+       background-color:rgb(167, 165, 165);
+    }
+    100%{
+        opacity:0;
+    }
+
+}
+@keyframes bounce-back {
+    0%{
+        opacity:0;
+        background-color:rgb(228, 225, 225);
+        transform: scale(0.4);
+        
+    }
+    50%{
+       opacity:1;
+       transform: scale(1.0);
+       background-color:rgb(167, 165, 165);
+    }
+    100%{
+        opacity:0;
+    }
+
+}

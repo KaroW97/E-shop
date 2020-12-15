@@ -1,13 +1,15 @@
 import React,{useState} from 'react';
 import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 import Badge from '@material-ui/core/Badge';
 import { MenuItem } from '@material-ui/core';
+
+import Grow from '@material-ui/core/Grow';
+import {useSelector} from 'react-redux'
+import {Link} from 'react-router-dom';
+import {selectFav} from './favListAndToBuyList'
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import Grow from '@material-ui/core/Grow';
-
 const timeout = 100
 export const RightSectionNavbarHeart = (props =>{
     const [open, setOpen ]=React.useState(false)
@@ -82,7 +84,7 @@ export const RightSectionNavbarHeart = (props =>{
 
 }) 
 export const RightSectionNavbarBag = (props =>{
-
+    const buyStateCount = useSelector(state=>state.favListAndToBuyList.buy);
     const [open, setOpen ]=React.useState(false)
     const [openMenu, setOpenMenu] = useState(false)
     const handleMouseEnter = (e) =>{
@@ -115,36 +117,85 @@ export const RightSectionNavbarBag = (props =>{
             onMouseLeave={handleMouseLeaveMenu}
         >
             <Card >
-                <CardContent className="article-right-side-navbar fav-section">
+                <CardContent className="article-right-side-navbar bag-section">
                     <section className="article-right-side-navbar-header bag-section-header">
-                        <h4>Twój koszyk jest pusty</h4>
+                        
+                    {    buyStateCount.buyElements.length != 0?
+                            <h4 >Zobacz swój koszyk</h4>:
+                            <h4 >Twój koszyk jest pusty</h4>
+                    }
                     </section>
                         <hr/>
-                    <section className="icon-section">
+                    <section className={buyStateCount.buyElements.length !=0? "to-buy-section extend-size": "to-buy-section "}>
+                    {
+                        buyStateCount.buyElements.map((item_info, index)=>{
+                            return(
+                                  
+                                <Card key={index} className="to-buy-article"
+                                to={`/${item_info.gender}/store-item-${item_info.id}-mainid-${item_info.mainid}-color-${item_info.color.slice(1)}`}
+                                    
+                                    component={Link} >
+                                    <article className="to-buy-img" >
+                                        <img src={item_info.images}/>
+                                    </article>
+                                    <article className="to-buy-information">
+                                        <h4>{item_info.company} {item_info.size}</h4>
+                                        <p>{item_info.subtype}</p>
+                                    </article>
+                                    <article className="to-buy-price">
+                                        <p>{item_info.price}zł</p>
+                                        <p>{item_info.color}</p>
+                                    </article> 
+                                </Card>
+                            
+                            )
+
+                        })
+                    }
+                    </section>
                     
-                    </section>
-                        <hr/>
                     <section className="button-section">
-                        <Button 
+                    {    buyStateCount.buyElements.length != 0?
+                        <article>
+                            <Button 
+                                variant="outlined"  
+                                color="secondary" 
+                                aria-label="bag button"
+                                onClick={closeWindow}
+                                className="article-right-side-navbar-button to-buy-bag-button color-change">  
+                                Do Koszyka
+                            </Button> 
+                            <Button 
+                                variant="contained"  
+                                color="secondary" 
+                                aria-label="bag button"
+                                onClick={closeWindow}
+                                className="article-right-side-navbar-button to-buy-bag-button">  
+                                Do Kasy
+                            </Button>
+                        </article>
+                      :
+                            <Button 
                             variant="contained"  
                             color="secondary" 
-                            aria-label="login button"
+                            aria-label="bag button"
                             onClick={closeWindow}
                             className="article-right-side-navbar-button">  
                             Znajdź nowe produkty
-                        </Button>   
+                        </Button>
+                    }
                     </section>
 
                 </CardContent>
             </Card>
-          
+         
         </Grow>
      )
     return(
         <div className="nav-bar-pop-up-element">
             <Badge 
                 className="icon-separation"
-                badgeContent={0} 
+                badgeContent={buyStateCount.count} 
                 showZero
                 color="primary"  
                 name="bag" 

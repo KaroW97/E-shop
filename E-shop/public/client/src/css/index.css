@@ -33,20 +33,14 @@ article{
     color:grey ;
     
 }
-.MuiTabs-flexContainer{
-    height: 70px;
-    
-}
+
 .avatar-icon{
     right:0;
 }
-.MuiToolbar-root {
-    display: flex;
-    justify-content:space-between ;
-}
+
 .MuiToolbar-root .MuiButtonBase-root{
     font-size:1.1rem;
-}  /*MuiTab-root MuiTab-textColorInherit Mui-selected*/
+} 
 .MuiButtonBase-root.avatar-icon:hover,
 .MuiButtonBase-root.avatar-icon:visited,
 .MuiButtonBase-root.avatar-icon:focus {
@@ -102,14 +96,13 @@ article{
 .item-in-store{
     cursor: pointer;
     padding-bottom:10px;
+    
+}
 
+.item-in-store{
+    margin: 0 0.5rem 0.5rem 0;
 }
-.item-in-store:not(:first-child){
-    margin: 0 5px;
-}
-.MuiCardContent-root{
- 
-}
+
 .item-in-store .card-content #cf,
 .item-in-store .card-content {
    
@@ -145,7 +138,7 @@ article{
 }
 /*Image opacity transition*/
 #cf img {
-  
+    max-height: 181px;
     width:inherit;
     position:absolute;
     -webkit-transition: opacity 0.7s ease-in-out;
@@ -153,8 +146,8 @@ article{
     -o-transition: opacity 0.7s ease-in-out;
     transition: opacity 0.7s ease-in-out;
 }
-
 .card-content:hover .top {
+  
     opacity:0;
 }
 .card-content:hover .icon-border{
@@ -220,7 +213,7 @@ article{
     height:40px;
 
 }
-.size-color-section .top-dot .dot{
+ .dot{
     width:13px;
     height: 13px;
     border-radius:50px;
